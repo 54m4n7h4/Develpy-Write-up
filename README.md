@@ -26,9 +26,11 @@ nc [IP] 10000
 ```
 ![](img/Develpy_nc0.png?raw=true)
 
+![](img/Develpy_nc0-1.png?raw=true)
+
 >Ce script est écrit en python mais dans quelle version de python?
 >On voit aussi que le module input est utilisé.
->S'il s'agit de python2 ,alors les commandes qu'on enverra au module input seront exécutées car le module input de python2 est vulnérable.
+
 
 # Deuxième étape : exploitation de vulnérabilité
 
@@ -38,6 +40,7 @@ Dans ce cas c'est bien python2 qui est utilisé.
 __import__('os').system('bash')
 ```
 La commande marche bien à merveille.
+Cette commande permet d'exécuter la commande bash sur le shell linux,comme ça on est directement sur la machine.
 
 ![](img/Develpy_nc.png?raw=true)
 
