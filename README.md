@@ -61,3 +61,5 @@ Avec la commande ci-dessus on a le premier flag.
 
 # Troisième étape : Escalade de privilège
 
+
+![](img/Develpy_nc_id.png?raw=true)
