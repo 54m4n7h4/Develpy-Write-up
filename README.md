@@ -32,15 +32,22 @@ nc [IP] 10000
 >On voit aussi que le module input est utilisé.
 
 
+**NameError: name 'a' is not defined
+
+On a l'exception suivante si on entre une lettre.
+>Ce qui veut dire que python n'a pas pu identifier la variable ou le module "a" : On a pas définit une varibale ou un module de nom de "a"
+
+**Il s'agit d'une vulnérabilité de python2 qui permet d'exécuter des codes sur la machine via python.
+
 # Deuxième étape : exploitation de vulnérabilité
 
-Dans ce cas c'est bien python2 qui est utilisé.
+Il y a plusieurs manières d'exploiter cette vulnérabilité.
 
 ```python
 __import__('os').system('bash')
 ```
-La commande marche bien à merveille.
-Cette commande permet d'exécuter la commande bash sur le shell linux,comme ça on est directement sur la machine.
+On va envoyer ce code pour exécuter la commande bash sur la machine.
+Une fois que ça serra fait on aurra accès à la machine sur l'utilisateur sur lequel est exécuté le script.
 
 ![](img/Develpy_nc.png?raw=true)
 
