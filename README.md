@@ -10,6 +10,6 @@ On commence par un scan de port avec nmap.
 
 `bash
 
-nmap -sS -A -Pn [IP]
+nmap -sS -A -Pn [IP]`
 
-`
+
