@@ -8,8 +8,9 @@ Cliquez [ici](https://tryhackme.com/room/bsidesgtdevelpy) pour accéder au room.
 
 On commence par un scan de port avec nmap.
 
-`bash
+```bash
 
-nmap -sS -A -Pn [IP]`
+nmap -sS -A -Pn [IP]
+```
 
 
