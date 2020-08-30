@@ -14,5 +14,5 @@ nmap -sS -A -Pn [IP]
 ```
 
 
-![](img/Develpy-nc.png?raw=true) 
+![](img/Develpy-scan.png?raw=true) 
 
