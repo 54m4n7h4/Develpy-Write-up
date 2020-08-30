@@ -17,7 +17,7 @@ nmap -sS -A -Pn [IP]
 ![](img/Develpy_scan.png?raw=true) 
 
 On voit q'au niveau du port 10000 il y a un petit script python qui tourne.
-On se connecte au serveur pour voir ce que ça va donner.
+On se connecte au serveur sur ce port pour voir ce que ça donne.
 
 
 ```bash
